@@ -194,28 +194,28 @@ export const HERO_STOREFRONT =
 export const SALON_VIDEOS = [
   {
     id: "v1",
-    src: "/videos/video1.mp4.MOV",
+    src: "/videos/video1.mp4.mov",
     title: "Salon Walkthrough",
     category: "Interior",
     tag: "Tour",
   },
   {
     id: "v2",
-    src: "/videos/video2.mp4.MOV",
+    src: "/videos/video2.mp4.mov",
     title: "Bridal Styling process",
     category: "Makeup",
     tag: "Event",
   },
   {
     id: "v3",
-    src: "/videos/video3.mp4.MOV",
+    src: "/videos/video3.mp4.mov",
     title: "Client Experience",
     category: "Interior",
     tag: "Client",
   },
   {
     id: "v5",
-    src: "/videos/video5.mp4.MOV",
+    src: "/videos/video5.mp4.mov",
     title: "Beautiful Result",
     category: "Hair",
     tag: "Styling",
