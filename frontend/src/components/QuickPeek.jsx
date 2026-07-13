@@ -6,7 +6,7 @@ export default function QuickPeek() {
 
   return (
     <section className="py-10 md:py-14 border-y border-[var(--es-line)] bg-[var(--es-cream-2)]/60 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10 flex items-end justify-between mb-6">
+      <div className="max-w-7xl mx-auto px-5 md:px-10 flex items-end justify-between mb-6">
         <div>
           <div className="text-[11px] tracking-[0.3em] uppercase text-[var(--es-mute)]">A Quick Peek</div>
           <h2 className="font-display text-3xl md:text-4xl mt-2">Wander inside our studio</h2>

@@ -30,6 +30,13 @@ export const SALON = {
 // Uploaded salon interior photos
 export const SALON_PHOTOS = [
   {
+    id: "p0",
+    src: "https://customer-assets.emergentagent.com/job_design-studio-1870/artifacts/ozeuu227_IMG_4974.webp",
+    title: "The Storefront",
+    category: "Exterior",
+    tag: "Entrance",
+  },
+  {
     id: "p1",
     src: "https://customer-assets.emergentagent.com/job_design-studio-1870/artifacts/s7y4j207_IMG_4985.webp",
     title: "Styling Suite",
@@ -154,4 +161,4 @@ export const SEED_REVIEWS = [
 ];
 
 export const HERO_STOREFRONT =
-  "https://customer-assets.emergentagent.com/job_design-studio-1870/artifacts/ln44ehp0_IMG_4994%202.webp";
+  "https://customer-assets.emergentagent.com/job_design-studio-1870/artifacts/ozeuu227_IMG_4974.webp";

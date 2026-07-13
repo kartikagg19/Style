@@ -9,8 +9,8 @@ export default function Studio() {
   const next = () => setI((v) => (v + 1) % total);
 
   return (
-    <section id="studio" className="py-20 md:py-28">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10">
+    <section id="studio" className="py-16 md:py-28">
+      <div className="max-w-7xl mx-auto px-5 md:px-10">
         <div className="flex items-end justify-between mb-10">
           <div>
             <div className="text-[11px] tracking-[0.3em] uppercase text-[var(--es-mute)]">The Studio</div>

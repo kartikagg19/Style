@@ -37,8 +37,8 @@ export default function Reviews() {
   };
 
   return (
-    <section id="reviews" className="py-20 md:py-28">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10">
+    <section id="reviews" className="py-16 md:py-28">
+      <div className="max-w-7xl mx-auto px-5 md:px-10">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
           <div>
             <div className="text-[11px] tracking-[0.3em] uppercase text-[var(--es-mute)]">The Praise</div>

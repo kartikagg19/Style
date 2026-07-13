@@ -1,23 +1,37 @@
-import React from "react";
-import { Phone, MapPin, Star, ArrowRight, Sparkles } from "lucide-react";
+import React, { useEffect, useState } from "react";
+import { Phone, MapPin, Star, ArrowRight, Sparkles, Instagram } from "lucide-react";
 import { SALON, HERO_STOREFRONT } from "../mock";
 
 export default function Hero() {
-  return (
-    <section id="top" className="relative pt-24 md:pt-28 pb-16 md:pb-24 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-          {/* Left — copy */}
-          <div className="lg:col-span-6 relative z-10">
-            <div className="flex items-center gap-3 mb-6 es-reveal">
-              <span className="es-divider" />
-              <span className="text-xs tracking-[0.3em] uppercase text-[var(--es-mute)]">
-                Est. {SALON.established} · Uttam Nagar
-              </span>
-            </div>
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    const t = setTimeout(() => setMounted(true), 60);
+    return () => clearTimeout(t);
+  }, []);
 
+  return (
+    <section id="top" className="relative pt-20 md:pt-28 pb-10 md:pb-24 overflow-hidden">
+      {/* Decorative background */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-24 -left-24 w-72 h-72 bg-[var(--es-gold)]/10 rounded-full blur-3xl es-float" />
+        <div className="absolute bottom-10 -right-16 w-96 h-96 bg-[var(--es-gold-2)]/10 rounded-full blur-3xl es-float-slow" />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-5 md:px-10 relative">
+        {/* Top kicker */}
+        <div className="flex items-center gap-3 mb-5 md:mb-6 es-reveal">
+          <span className="es-divider" />
+          <span className="text-[10px] md:text-xs tracking-[0.3em] uppercase text-[var(--es-mute)]">
+            Est. {SALON.established} · Unisex Salon · Uttam Nagar
+          </span>
+        </div>
+
+        {/* Mobile-first stacked layout, desktop 2-col */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          {/* Copy */}
+          <div className="lg:col-span-6 lg:order-1 order-2 relative z-10">
             <h1
-              className="font-display text-5xl md:text-7xl lg:text-[5.5rem] leading-[1.02] tracking-tight es-reveal"
+              className="font-display text-[3.25rem] leading-[1.02] md:text-7xl lg:text-[5.5rem] tracking-tight es-reveal"
               style={{ animationDelay: "0.05s" }}
             >
               Refined.
@@ -28,7 +42,7 @@ export default function Hero() {
             </h1>
 
             <p
-              className="mt-6 text-[15px] md:text-base leading-relaxed text-[var(--es-ink-2)] max-w-lg es-reveal"
+              className="mt-5 md:mt-6 text-[15px] leading-relaxed text-[var(--es-ink-2)] max-w-lg es-reveal"
               style={{ animationDelay: "0.15s" }}
             >
               Delhi’s beloved luxury makeup studio & unisex salon by
@@ -37,7 +51,7 @@ export default function Hero() {
             </p>
 
             <div
-              className="mt-8 flex flex-wrap items-center gap-3 es-reveal"
+              className="mt-6 md:mt-8 flex flex-wrap items-center gap-3 es-reveal"
               style={{ animationDelay: "0.25s" }}
             >
               <a href="#contact" className="es-btn-primary">
@@ -50,35 +64,35 @@ export default function Hero() {
 
             {/* Stats */}
             <div
-              className="mt-12 grid grid-cols-3 gap-6 max-w-md es-reveal"
+              className="mt-8 md:mt-12 grid grid-cols-3 gap-4 md:gap-6 max-w-md es-reveal"
               style={{ animationDelay: "0.35s" }}
             >
               <div>
                 <div className="flex items-center gap-1">
-                  <span className="font-display text-3xl">{SALON.rating.toFixed(1)}</span>
+                  <span className="font-display text-2xl md:text-3xl">{SALON.rating.toFixed(1)}</span>
                   <Star className="w-4 h-4 fill-[var(--es-gold)] text-[var(--es-gold)]" />
                 </div>
-                <div className="text-[11px] tracking-[0.2em] uppercase text-[var(--es-mute)] mt-1">
+                <div className="text-[10px] tracking-[0.2em] uppercase text-[var(--es-mute)] mt-1">
                   Rated
                 </div>
               </div>
               <div>
-                <div className="font-display text-3xl">{SALON.reviewCount}</div>
-                <div className="text-[11px] tracking-[0.2em] uppercase text-[var(--es-mute)] mt-1">
+                <div className="font-display text-2xl md:text-3xl">{SALON.reviewCount}</div>
+                <div className="text-[10px] tracking-[0.2em] uppercase text-[var(--es-mute)] mt-1">
                   Reviews
                 </div>
               </div>
               <div>
-                <div className="font-display text-3xl">{SALON.yearsOperating}+</div>
-                <div className="text-[11px] tracking-[0.2em] uppercase text-[var(--es-mute)] mt-1">
+                <div className="font-display text-2xl md:text-3xl">{SALON.yearsOperating}+</div>
+                <div className="text-[10px] tracking-[0.2em] uppercase text-[var(--es-mute)] mt-1">
                   Years
                 </div>
               </div>
             </div>
 
-            {/* Quick actions */}
+            {/* Quick actions — hidden on very small since we have sticky bar */}
             <div
-              className="mt-8 flex flex-wrap gap-3 es-reveal"
+              className="mt-6 hidden sm:flex flex-wrap gap-3 es-reveal"
               style={{ animationDelay: "0.45s" }}
             >
               <a
@@ -108,38 +122,57 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right — image */}
-          <div className="lg:col-span-6 relative">
-            <div className="relative aspect-[4/5] rounded-[20px] overflow-hidden es-reveal" style={{ animationDelay: "0.1s" }}>
+          {/* Storefront image — dominant on mobile */}
+          <div className="lg:col-span-6 lg:order-2 order-1 relative">
+            <div
+              className={`relative aspect-[4/5] sm:aspect-[3/4] lg:aspect-[4/5] rounded-[20px] overflow-hidden group ${
+                mounted ? "es-kenburns" : ""
+              }`}
+            >
               <img
                 src={HERO_STOREFRONT}
-                alt="Elegant Style salon interior"
+                alt="Elegant Style storefront — Unisex Salon by Upasana Rajput"
                 className="w-full h-full object-cover"
                 loading="eager"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-              <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between text-white">
-                <div>
-                  <div className="text-[10px] uppercase tracking-[0.3em] opacity-80">The Studio</div>
-                  <div className="font-display text-xl mt-1">Uttam Nagar, New Delhi</div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent" />
+              {/* Top corner badge */}
+              <div className="absolute top-4 left-4 flex items-center gap-2 bg-white/85 backdrop-blur-sm px-3 py-1.5 rounded-full text-[10px] uppercase tracking-[0.25em] text-[var(--es-ink)]">
+                <Sparkles className="w-3 h-3 text-[var(--es-gold)]" /> Bespoke Rituals
+              </div>
+              {/* Bottom info */}
+              <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between text-white pointer-events-none">
+                <div className="max-w-[55%] md:max-w-none">
+                  <div className="text-[10px] uppercase tracking-[0.3em] opacity-85">The Studio</div>
+                  <div className="font-display text-lg md:text-2xl mt-0.5 leading-tight">Elegant Style</div>
+                  <div className="text-[11px] opacity-80">by {SALON.owner}</div>
                 </div>
-                <div className="flex items-center gap-1 bg-white/20 backdrop-blur-sm px-3 py-1.5 rounded-full text-xs">
-                  <Sparkles className="w-3.5 h-3.5" /> Bespoke
-                </div>
+                <a
+                  href={SALON.socials.instagram}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="pointer-events-auto w-9 h-9 rounded-full bg-white/15 backdrop-blur-sm border border-white/25 flex items-center justify-center hover:bg-white hover:text-[var(--es-ink)] transition-colors"
+                  aria-label="Instagram"
+                >
+                  <Instagram className="w-4 h-4" />
+                </a>
               </div>
             </div>
 
-            {/* Floating card */}
-            <div className="absolute -bottom-6 -left-6 hidden md:block bg-[var(--es-cream)] border border-[var(--es-line)] rounded-2xl p-4 shadow-xl es-reveal" style={{ animationDelay: "0.4s" }}>
-              <div className="flex items-center gap-3">
+            {/* Floating rating card */}
+            <div
+              className="mt-4 lg:mt-0 lg:absolute lg:-bottom-5 lg:-left-6 lg:max-w-[240px] bg-[var(--es-cream)] border border-[var(--es-line)] rounded-2xl p-3.5 md:p-4 shadow-xl es-reveal"
+              style={{ animationDelay: "0.5s" }}
+            >
+              <div className="flex items-center gap-2">
                 <div className="flex">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-3.5 h-3.5 fill-[var(--es-gold)] text-[var(--es-gold)]" />
                   ))}
                 </div>
-                <div className="text-xs text-[var(--es-mute)]">Google · 238 reviews</div>
+                <div className="text-[10px] md:text-xs text-[var(--es-mute)]">Google · 238 reviews</div>
               </div>
-              <div className="font-display text-lg mt-1">“A true five-star ritual.”</div>
+              <div className="font-display text-base md:text-lg mt-1 leading-tight">“A true five-star ritual.”</div>
             </div>
           </div>
         </div>

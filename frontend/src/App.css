@@ -75,6 +75,43 @@ body {
 }
 .es-marquee-track:hover { animation-play-state: paused; }
 
+/* Ken Burns slow zoom for hero image */
+@keyframes es-kenburns {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.08); }
+}
+.es-kenburns img { animation: es-kenburns 14s ease-in-out infinite alternate; }
+
+/* Floating orbs */
+@keyframes es-float {
+  0%, 100% { transform: translateY(0) translateX(0); }
+  50% { transform: translateY(-24px) translateX(12px); }
+}
+.es-float { animation: es-float 10s ease-in-out infinite; }
+.es-float-slow { animation: es-float 16s ease-in-out infinite; }
+
+/* Shine sweep on buttons */
+@keyframes es-shine {
+  0% { transform: translateX(-120%); }
+  100% { transform: translateX(220%); }
+}
+.es-shine { position: relative; overflow: hidden; }
+.es-shine::before {
+  content: ""; position: absolute; top: 0; left: 0; height: 100%; width: 40%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.35), transparent);
+  transform: translateX(-120%); pointer-events: none;
+}
+.es-shine:hover::before { animation: es-shine 0.9s ease; }
+
+/* Underline hover for nav */
+.es-navlink { position: relative; }
+.es-navlink::after {
+  content: ""; position: absolute; left: 0; bottom: -6px; height: 1px; width: 100%;
+  background: var(--es-gold); transform: scaleX(0); transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.2,0.7,0.2,1);
+}
+.es-navlink:hover::after { transform: scaleX(1); }
+
 /* Divider */
 .es-divider {
   width: 56px; height: 1px; background: var(--es-gold);
@@ -134,16 +171,22 @@ body {
 /* Gallery masonry */
 .es-masonry {
   column-count: 1;
-  column-gap: 1rem;
+  column-gap: 0.75rem;
 }
-@media (min-width: 640px) { .es-masonry { column-count: 2; } }
+@media (min-width: 640px) { .es-masonry { column-count: 2; column-gap: 1rem; } }
 @media (min-width: 1024px) { .es-masonry { column-count: 3; } }
 .es-masonry-item {
   break-inside: avoid;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
   border-radius: 14px;
   overflow: hidden;
   position: relative;
+}
+@media (min-width: 640px) { .es-masonry-item { margin-bottom: 1rem; } }
+
+/* Mobile padding utility */
+@media (max-width: 640px) {
+  body { padding-bottom: 72px; /* room for sticky mobile bar */ }
 }
 
 /* Star input */

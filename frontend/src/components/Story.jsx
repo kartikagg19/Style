@@ -4,8 +4,8 @@ import { SALON, SALON_PHOTOS } from "../mock";
 
 export default function Story() {
   return (
-    <section id="story" className="py-20 md:py-28">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-12 gap-12 items-center">
+    <section id="story" className="py-16 md:py-28">
+      <div className="max-w-7xl mx-auto px-5 md:px-10 grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
         <div className="lg:col-span-5 relative">
           <div className="relative aspect-[4/5] rounded-[20px] overflow-hidden">
             <img src={SALON_PHOTOS[3].src} alt="Visit us at Uttam Nagar" className="w-full h-full object-cover" loading="lazy" />

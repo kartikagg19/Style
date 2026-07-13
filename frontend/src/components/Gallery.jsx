@@ -4,7 +4,7 @@ import { SALON_PHOTOS } from "../mock";
 
 // Gallery uses uploaded salon photos. You can push more images to your GitHub repo
 // under /app/frontend/public/gallery/ and add entries here.
-const FILTERS = ["All", "Interior", "Reception", "Retail", "Facial"];
+const FILTERS = ["All", "Exterior", "Interior", "Reception", "Retail", "Facial"];
 
 export default function Gallery() {
   const [filter, setFilter] = useState("All");
@@ -17,7 +17,7 @@ export default function Gallery() {
     const extras = SALON_PHOTOS.map((p, idx) => ({
       ...p,
       id: `${p.id}-extra`,
-      title: ["Ambient Detail", "Warm Corners", "Tools of Craft", "Every Ritual", "Quiet Luxury"][idx],
+      title: ["Golden Hour Facade", "Ambient Detail", "Warm Corners", "Tools of Craft", "Every Ritual", "Quiet Luxury"][idx] || "Studio Moment",
       type: "image",
     }));
     const combined = [...base, ...extras];
@@ -26,8 +26,8 @@ export default function Gallery() {
   }, [filter]);
 
   return (
-    <section id="gallery" className="py-20 md:py-28 bg-[var(--es-cream-2)]/60 border-y border-[var(--es-line)]">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10">
+    <section id="gallery" className="py-16 md:py-28 bg-[var(--es-cream-2)]/60 border-y border-[var(--es-line)]">
+      <div className="max-w-7xl mx-auto px-5 md:px-10">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
           <div>
             <div className="text-[11px] tracking-[0.3em] uppercase text-[var(--es-mute)]">The Gallery</div>

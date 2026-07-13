@@ -41,7 +41,7 @@ export default function Navbar() {
             <a
               key={l.href}
               href={l.href}
-              className="text-sm tracking-wide text-[var(--es-ink-2)] hover:text-[var(--es-gold)] transition-colors"
+              className="text-sm tracking-wide text-[var(--es-ink-2)] hover:text-[var(--es-gold)] transition-colors es-navlink"
             >
               {l.label}
             </a>

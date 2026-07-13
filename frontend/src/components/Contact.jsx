@@ -17,8 +17,8 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 md:py-28 bg-[var(--es-ink)] text-[var(--es-cream)]">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-12 gap-10">
+    <section id="contact" className="py-16 md:py-28 bg-[var(--es-ink)] text-[var(--es-cream)]">
+      <div className="max-w-7xl mx-auto px-5 md:px-10 grid lg:grid-cols-12 gap-10">
         <div className="lg:col-span-5">
           <div className="text-[11px] tracking-[0.3em] uppercase text-[var(--es-gold-2)]">Reserve</div>
           <h2 className="font-display text-4xl md:text-5xl mt-2">
