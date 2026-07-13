@@ -31,35 +31,35 @@ export const SALON = {
 export const SALON_PHOTOS = [
   {
     id: "p0",
-    src: "https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=1000",
+    src: "/images/1.jpg",
     title: "The Storefront",
     category: "Exterior",
     tag: "Entrance",
   },
   {
     id: "p1",
-    src: "https://images.unsplash.com/photo-1516975080661-46bdcb5b7be1?q=80&w=1000",
+    src: "/images/2.jpg",
     title: "Styling Suite",
     category: "Interior",
     tag: "Hair",
   },
   {
     id: "p2",
-    src: "https://images.unsplash.com/photo-1600948836101-f9f305a28cb2?q=80&w=1000",
+    src: "/images/3.jpg",
     title: "Signature Station",
     category: "Interior",
     tag: "Styling",
   },
   {
     id: "p3",
-    src: "https://images.unsplash.com/photo-1595152772591-648b292bd3a4?q=80&w=1000",
+    src: "/images/4.jpg",
     title: "The Colour Bar",
     category: "Retail",
     tag: "Products",
   },
   {
     id: "p4",
-    src: "https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=1000",
+    src: "/images/5.jpg",
     title: "Welcome Desk",
     category: "Reception",
     tag: "Entry",
@@ -161,4 +161,4 @@ export const SEED_REVIEWS = [
 ];
 
 export const HERO_STOREFRONT =
-  "https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=1000";
+  "/images/1.jpg";
