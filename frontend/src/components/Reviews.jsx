@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Star, Quote, Plus, X, Send } from "lucide-react";
-import { SEED_REVIEWS } from "../mock";
+import { SALON, SEED_REVIEWS } from "../mock";
 import { useToast } from "../hooks/use-toast";
 
 const STORAGE_KEY = "es_reviews";
