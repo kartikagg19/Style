@@ -120,23 +120,28 @@ body {
 
 /* Buttons */
 .es-btn-primary {
-  background: var(--es-ink);
-  color: var(--es-cream);
-  padding: 0.85rem 1.6rem;
+  background: linear-gradient(135deg, #b8895a 0%, #8a6a3d 50%, #6d5330 100%);
+  color: #fff8ee;
+  padding: 0.95rem 1.8rem;
   border-radius: 999px;
   font-weight: 500;
-  letter-spacing: 0.04em;
-  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
   text-transform: uppercase;
-  transition: background 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
+  box-shadow: 0 12px 28px -14px rgba(138, 106, 61, 0.65),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 .es-btn-primary:hover {
-  background: var(--es-accent);
   transform: translateY(-1px);
-  box-shadow: 0 10px 24px -12px rgba(138, 106, 61, 0.55);
+  filter: brightness(1.06);
+  box-shadow: 0 16px 32px -14px rgba(138, 106, 61, 0.75),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
 .es-btn-ghost {
@@ -185,8 +190,8 @@ body {
 @media (min-width: 640px) { .es-masonry-item { margin-bottom: 1rem; } }
 
 /* Mobile padding utility */
-@media (max-width: 640px) {
-  body { padding-bottom: 72px; /* room for sticky mobile bar */ }
+@media (max-width: 1023px) {
+  body { padding-bottom: 96px; /* room for sticky bottom nav */ }
 }
 
 /* Star input */

@@ -10,6 +10,7 @@ import Reviews from "../components/Reviews";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import MobileBar from "../components/MobileBar";
+import BottomNav from "../components/BottomNav";
 
 export default function Home() {
   return (
@@ -24,7 +25,7 @@ export default function Home() {
       <Reviews />
       <Contact />
       <Footer />
-      <MobileBar />
+      <BottomNav />
     </main>
   );
 }
