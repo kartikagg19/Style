@@ -31,7 +31,7 @@ export const SALON = {
 export const SALON_PHOTOS = [
   {
     id: "p0",
-    src: "/images/1.jpg",
+    src: "/images/hero.jpg",
     title: "The Storefront",
     category: "Exterior",
     tag: "Entrance",
@@ -45,21 +45,21 @@ export const SALON_PHOTOS = [
   },
   {
     id: "p2",
-    src: "/images/3.jpg",
+    src: "/images/facial.jpg",
     title: "Signature Station",
     category: "Interior",
     tag: "Styling",
   },
   {
     id: "p3",
-    src: "/images/4.jpg",
+    src: "/images/nails.jpg",
     title: "The Colour Bar",
     category: "Retail",
     tag: "Products",
   },
   {
     id: "p4",
-    src: "/images/5.jpg",
+    src: "/images/reception.jpg",
     title: "Welcome Desk",
     category: "Reception",
     tag: "Entry",
@@ -161,4 +161,4 @@ export const SEED_REVIEWS = [
 ];
 
 export const HERO_STOREFRONT =
-  "/images/1.jpg";
+  "/images/hero.jpg";
