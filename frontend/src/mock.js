@@ -31,42 +31,42 @@ export const SALON = {
 export const SALON_PHOTOS = [
   {
     id: "p0",
-    src: "https://customer-assets.emergentagent.com/job_design-studio-1870/artifacts/ozeuu227_IMG_4974.webp",
+    src: "https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=1000",
     title: "The Storefront",
     category: "Exterior",
     tag: "Entrance",
   },
   {
     id: "p1",
-    src: "https://customer-assets.emergentagent.com/job_design-studio-1870/artifacts/s7y4j207_IMG_4985.webp",
+    src: "https://images.unsplash.com/photo-1516975080661-46bdcb5b7be1?q=80&w=1000",
     title: "Styling Suite",
     category: "Interior",
     tag: "Hair",
   },
   {
     id: "p2",
-    src: "https://customer-assets.emergentagent.com/job_design-studio-1870/artifacts/mmhjs6ye_IMG_4990%202.webp",
+    src: "https://images.unsplash.com/photo-1600948836101-f9f305a28cb2?q=80&w=1000",
     title: "Signature Station",
     category: "Interior",
     tag: "Styling",
   },
   {
     id: "p3",
-    src: "https://customer-assets.emergentagent.com/job_design-studio-1870/artifacts/seoy0jh3_IMG_4993%202.webp",
+    src: "https://images.unsplash.com/photo-1595152772591-648b292bd3a4?q=80&w=1000",
     title: "The Colour Bar",
     category: "Retail",
     tag: "Products",
   },
   {
     id: "p4",
-    src: "https://customer-assets.emergentagent.com/job_design-studio-1870/artifacts/ln44ehp0_IMG_4994%202.webp",
+    src: "https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=1000",
     title: "Welcome Desk",
     category: "Reception",
     tag: "Entry",
   },
   {
     id: "p5",
-    src: "https://customer-assets.emergentagent.com/job_design-studio-1870/artifacts/yan8hyi6_IMG_5007%202.webp",
+    src: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=1000",
     title: "Skincare Suite",
     category: "Facial",
     tag: "Wellness",
@@ -161,4 +161,4 @@ export const SEED_REVIEWS = [
 ];
 
 export const HERO_STOREFRONT =
-  "https://customer-assets.emergentagent.com/job_design-studio-1870/artifacts/ozeuu227_IMG_4974.webp";
+  "https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=1000";
