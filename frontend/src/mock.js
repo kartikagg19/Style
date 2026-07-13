@@ -21,7 +21,7 @@ export const SALON = {
     sunday: "11:00 AM – 8:00 PM",
   },
   socials: {
-    instagram: "https://instagram.com",
+    instagram: "https://www.instagram.com/elegantstylebyupasanarajput?igsh=MWJsNDdhZXp2aDk1eA==",
     facebook: "https://facebook.com",
   },
   stylists: ["Siraj", "Nasreen", "Aamir", "Sidhu"],

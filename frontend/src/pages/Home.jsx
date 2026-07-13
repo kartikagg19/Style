@@ -3,7 +3,6 @@ import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import QuickPeek from "../components/QuickPeek";
 import Story from "../components/Story";
-import Menu from "../components/Menu";
 import Studio from "../components/Studio";
 import Gallery from "../components/Gallery";
 import Reviews from "../components/Reviews";
@@ -19,7 +18,6 @@ export default function Home() {
       <Hero />
       <QuickPeek />
       <Story />
-      <Menu />
       <Studio />
       <Gallery />
       <Reviews />

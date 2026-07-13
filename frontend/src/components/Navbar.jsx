@@ -4,7 +4,6 @@ import { SALON } from "../mock";
 
 const LINKS = [
   { label: "Story", href: "#story" },
-  { label: "Menu", href: "#menu" },
   { label: "Studio", href: "#studio" },
   { label: "Gallery", href: "#gallery" },
   { label: "Reviews", href: "#reviews" },

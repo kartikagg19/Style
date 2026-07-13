@@ -3,8 +3,7 @@ import { Home as HomeIcon, ScissorsSquare, CalendarCheck, Images, MessageSquareH
 
 const ITEMS = [
   { key: "top", label: "Home", icon: HomeIcon, href: "#top" },
-  { key: "menu", label: "Menu", icon: ScissorsSquare, href: "#menu" },
-  { key: "contact", label: "Book", icon: CalendarCheck, href: "#contact", primary: true },
+  { key: "contact", label: "Book", icon: CalendarCheck, href: "https://elegantstylebyupasanarajput.com/4YaE8IZa7dNNv8xkeU8F/OfUAwzr9mme0LbQjTWx3/booking/", target: "_blank", rel: "noreferrer", primary: true },
   { key: "gallery", label: "Gallery", icon: Images, href: "#gallery" },
   { key: "reviews", label: "Reviews", icon: MessageSquareHeart, href: "#reviews" },
 ];
