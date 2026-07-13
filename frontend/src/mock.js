@@ -6,7 +6,7 @@ export const SALON = {
   tagline: "Refined. Radiant. Yours.",
   established: 2016,
   rating: 5.0,
-  reviewCount: 238,
+  reviewCount: 350,
   yearsOperating: 10,
   phone: "085271 18833",
   phoneRaw: "+918527118833",

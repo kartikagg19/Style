@@ -43,7 +43,7 @@ export default function Reviews() {
           <div>
             <div className="text-[11px] tracking-[0.3em] uppercase text-[var(--es-mute)]">The Praise</div>
             <h2 className="font-display text-4xl md:text-5xl mt-2">
-              Loved by <em className="text-[var(--es-accent)]">{reviews.length}+</em> guests.
+              Loved by <em className="text-[var(--es-accent)]">{SALON.reviewCount}+</em> guests.
             </h2>
             <div className="flex items-center gap-2 mt-3">
               {[...Array(5)].map((_, i) => (
