@@ -1,26 +1,19 @@
 import React, { useMemo, useState } from "react";
 import { X, Camera, PlayCircle, Filter } from "lucide-react";
-import { SALON_PHOTOS } from "../mock";
+import { SALON_PHOTOS, SALON_VIDEOS } from "../mock";
 
 // Gallery uses uploaded salon photos. You can push more images to your GitHub repo
 // under /app/frontend/public/gallery/ and add entries here.
-const FILTERS = ["All", "Exterior", "Interior", "Reception", "Retail", "Facial"];
+const FILTERS = ["All", "Bridal", "Videos"];
 
 export default function Gallery() {
   const [filter, setFilter] = useState("All");
   const [active, setActive] = useState(null);
 
   const items = useMemo(() => {
-    // Repeat images with slight variations to enrich the gallery layout.
-    const base = SALON_PHOTOS.map((p) => ({ ...p, type: "image" }));
-    // Simulate extra shots by re-using assets with different titles
-    const extras = SALON_PHOTOS.map((p, idx) => ({
-      ...p,
-      id: `${p.id}-extra`,
-      title: ["Golden Hour Facade", "Ambient Detail", "Warm Corners", "Tools of Craft", "Every Ritual", "Quiet Luxury"][idx] || "Studio Moment",
-      type: "image",
-    }));
-    const combined = [...base, ...extras];
+    const base = SALON_PHOTOS.filter(p => p.category === "Makeup").map((p) => ({ ...p, type: "image", category: "Bridal" }));
+    const videos = SALON_VIDEOS.map((v) => ({ ...v, type: "video", category: "Videos" }));
+    const combined = [...videos, ...base]; // Videos first
     if (filter === "All") return combined;
     return combined.filter((p) => p.category === filter);
   }, [filter]);
@@ -69,14 +62,27 @@ export default function Gallery() {
               className="es-masonry-item group block w-full text-left"
             >
               <div className="relative overflow-hidden">
-                <img
-                  src={p.src}
-                  alt={p.title}
-                  loading="lazy"
-                  className={`w-full object-cover transition-transform duration-700 group-hover:scale-105 ${
-                    idx % 3 === 0 ? "aspect-[3/4]" : idx % 3 === 1 ? "aspect-[4/3]" : "aspect-square"
-                  }`}
-                />
+                {p.type === "video" ? (
+                  <video
+                    src={p.src}
+                    loop
+                    muted
+                    playsInline
+                    autoPlay
+                    className={`w-full object-cover transition-transform duration-700 group-hover:scale-105 ${
+                      idx % 3 === 0 ? "aspect-[3/4]" : idx % 3 === 1 ? "aspect-[4/3]" : "aspect-square"
+                    }`}
+                  />
+                ) : (
+                  <img
+                    src={p.src}
+                    alt={p.title}
+                    loading="lazy"
+                    className={`w-full object-cover transition-transform duration-700 group-hover:scale-105 ${
+                      idx % 3 === 0 ? "aspect-[3/4]" : idx % 3 === 1 ? "aspect-[4/3]" : "aspect-square"
+                    }`}
+                  />
+                )}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500 text-white">
                   <div className="flex items-center gap-2 text-[10px] uppercase tracking-[0.25em] opacity-90">
@@ -118,7 +124,11 @@ export default function Gallery() {
             className="max-w-5xl w-full max-h-full overflow-hidden rounded-xl"
             onClick={(e) => e.stopPropagation()}
           >
-            <img src={active.src} alt={active.title} className="w-full h-auto max-h-[85vh] object-contain rounded-xl" />
+            {active.type === "video" ? (
+              <video src={active.src} controls autoPlay className="w-full h-auto max-h-[85vh] object-contain rounded-xl" />
+            ) : (
+              <img src={active.src} alt={active.title} className="w-full h-auto max-h-[85vh] object-contain rounded-xl" />
+            )}
             <div className="mt-4 text-center text-white/90">
               <div className="text-[10px] uppercase tracking-[0.3em] opacity-70">{active.category}</div>
               <div className="font-display text-2xl mt-1">{active.title}</div>
