@@ -62,8 +62,11 @@ export default function Navbar() {
           <a href={`tel:${SALON.phoneRaw}`} className="es-btn-ghost !py-2 !px-4 !text-xs">
             <Phone className="w-3.5 h-3.5" /> {SALON.phone}
           </a>
-          <a href="#contact" className="es-btn-primary !py-2 !px-5 !text-xs">
-            Reserve
+          <a href="https://wa.me/918527118833" target="_blank" rel="noreferrer" className="es-btn-ghost !py-2 !px-4 !text-xs">
+            WhatsApp
+          </a>
+          <a href="https://elegantstylebyupasanarajput.com/4YaE8IZa7dNNv8xkeU8F/OfUAwzr9mme0LbQjTWx3/booking/" target="_blank" rel="noreferrer" className="es-btn-primary !py-2 !px-5 !text-xs">
+            Book
           </a>
         </div>
 
@@ -101,9 +104,14 @@ export default function Navbar() {
                 <span className="text-[var(--es-gold)]">→</span>
               </a>
             ))}
-            <a href="#contact" onClick={() => setOpen(false)} className="es-btn-primary justify-center mt-4">
-              Reserve Now
-            </a>
+            <div className="flex gap-2">
+              <a href="https://wa.me/918527118833" target="_blank" rel="noreferrer" onClick={() => setOpen(false)} className="es-btn-ghost justify-center flex-1 mt-4">
+                WhatsApp
+              </a>
+              <a href="https://elegantstylebyupasanarajput.com/4YaE8IZa7dNNv8xkeU8F/OfUAwzr9mme0LbQjTWx3/booking/" target="_blank" rel="noreferrer" onClick={() => setOpen(false)} className="es-btn-primary justify-center flex-1 mt-4">
+                Book
+              </a>
+            </div>
           </div>
         </div>
       )}
