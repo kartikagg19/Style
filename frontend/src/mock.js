@@ -71,6 +71,34 @@ export const SALON_PHOTOS = [
     category: "Facial",
     tag: "Wellness",
   },
+  {
+    id: "p6",
+    src: "/images/gallery1.jpg",
+    title: "Bridal Group",
+    category: "Makeup",
+    tag: "Event",
+  },
+  {
+    id: "p7",
+    src: "/images/gallery2.jpg",
+    title: "Bridal Styling",
+    category: "Makeup",
+    tag: "Event",
+  },
+  {
+    id: "p8",
+    src: "/images/gallery3.jpg",
+    title: "Bridal Portrait",
+    category: "Makeup",
+    tag: "Bridal",
+  },
+  {
+    id: "p9",
+    src: "/images/gallery4.jpg",
+    title: "Bridal Look",
+    category: "Makeup",
+    tag: "Bridal",
+  },
 ];
 
 export const SERVICES = [
