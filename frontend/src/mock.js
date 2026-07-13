@@ -38,14 +38,14 @@ export const SALON_PHOTOS = [
   },
   {
     id: "p1",
-    src: "/images/2.jpg",
+    src: "/images/chairs2.jpg",
     title: "Styling Suite",
     category: "Interior",
     tag: "Hair",
   },
   {
     id: "p2",
-    src: "/images/facial.jpg",
+    src: "/images/mirrors.jpg",
     title: "Signature Station",
     category: "Interior",
     tag: "Styling",
@@ -66,7 +66,7 @@ export const SALON_PHOTOS = [
   },
   {
     id: "p5",
-    src: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=1000",
+    src: "/images/facial2.jpg",
     title: "Skincare Suite",
     category: "Facial",
     tag: "Wellness",
