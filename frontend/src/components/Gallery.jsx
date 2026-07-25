@@ -63,12 +63,8 @@ export default function Gallery() {
             >
               <div className="relative overflow-hidden">
                 {p.type === "video" ? (
-                  <video
+                  <GridVideo
                     src={p.src}
-                    loop
-                    muted
-                    playsInline
-                    autoPlay
                     className={`w-full object-cover transition-transform duration-700 group-hover:scale-105 ${
                       idx % 3 === 0 ? "aspect-[3/4]" : idx % 3 === 1 ? "aspect-[4/3]" : "aspect-square"
                     }`}
@@ -137,5 +133,39 @@ export default function Gallery() {
         </div>
       )}
     </section>
+  );
+}
+
+function GridVideo({ src, className }) {
+  const vidRef = React.useRef(null);
+
+  React.useEffect(() => {
+    if (!vidRef.current) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            vidRef.current.play().catch(() => {});
+          } else {
+            vidRef.current.pause();
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+    observer.observe(vidRef.current);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <video
+      ref={vidRef}
+      src={src}
+      loop
+      muted
+      playsInline
+      preload="metadata"
+      className={className}
+    />
   );
 }

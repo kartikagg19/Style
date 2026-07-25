@@ -31,7 +31,7 @@ export default function Hero() {
           {/* Storefront image with overlays */}
           <div className="lg:col-span-6 lg:order-2 relative">
             <div
-              className={`relative aspect-[4/5] rounded-[24px] overflow-hidden shadow-[0_30px_60px_-30px_rgba(26,22,19,0.5)] ${
+              className={`relative aspect-[4/3] rounded-[24px] overflow-hidden shadow-[0_30px_60px_-30px_rgba(26,22,19,0.5)] ${
                 mounted ? "es-kenburns" : ""
               }`}
             >

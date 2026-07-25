@@ -219,5 +219,12 @@ export const SALON_VIDEOS = [
     title: "Beautiful Result",
     category: "Hair",
     tag: "Styling",
+  },
+  {
+    id: "v6",
+    src: "/videos/video56.mp4",
+    title: "Studio Reveal",
+    category: "Interior",
+    tag: "Tour",
   }
 ];
