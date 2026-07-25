@@ -68,7 +68,10 @@ export default function Gallery() {
                       idx % 3 === 0 ? "aspect-[3/4]" : idx % 3 === 1 ? "aspect-[4/3]" : "aspect-square"
                     }`}
                   >
-                    <div className="absolute inset-0 bg-gradient-to-tr from-[black] to-[var(--es-ink-2)] opacity-80" />
+                    {p.thumb && (
+                      <img src={p.thumb} alt="Preview" className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-40 transition-opacity duration-700 mix-blend-luminosity" />
+                    )}
+                    <div className="absolute inset-0 bg-gradient-to-tr from-[black] to-[var(--es-ink-2)] opacity-60 mix-blend-multiply" />
                     <div className="relative z-10 w-16 h-16 rounded-full border-2 border-[var(--es-gold-2)] flex items-center justify-center bg-black/50 group-hover:bg-[var(--es-gold-2)] group-hover:border-transparent transition-all shadow-[0_10px_20px_-10px_rgba(238,197,143,0.5)]">
                       <div className="w-0 h-0 border-t-[8px] border-t-transparent border-l-[14px] border-l-white border-b-[8px] border-b-transparent ml-1" />
                     </div>
