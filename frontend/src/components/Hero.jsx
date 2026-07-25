@@ -124,12 +124,11 @@ export default function Hero() {
 
             {/* Stats */}
             <div
-              className="mt-6 md:mt-12 grid grid-cols-3 gap-3 md:gap-6 max-w-md es-reveal"
+              className="mt-6 md:mt-12 grid grid-cols-2 gap-3 md:gap-6 max-w-md es-reveal"
               style={{ animationDelay: "0.35s" }}
             >
               <Stat value={SALON.rating.toFixed(1)} suffix={<Star className="w-3.5 h-3.5 fill-[var(--es-gold)] text-[var(--es-gold)] inline" />} label="Rated" />
               <Stat value={SALON.reviewCount} label="Reviews" />
-              <Stat value={`${SALON.yearsOperating}+`} label="Years" />
             </div>
 
             {/* Call & Directions pills */}

@@ -68,7 +68,7 @@ export default function Gallery() {
                     loop
                     muted
                     playsInline
-                    autoPlay
+                    preload="metadata"
                     className={`w-full object-cover transition-transform duration-700 group-hover:scale-105 ${
                       idx % 3 === 0 ? "aspect-[3/4]" : idx % 3 === 1 ? "aspect-[4/3]" : "aspect-square"
                     }`}

@@ -189,7 +189,7 @@ export const SEED_REVIEWS = [
 ];
 
 export const HERO_STOREFRONT =
-  "/images/hero.jpg";
+  "/images/gate.png";
 
 export const SALON_VIDEOS = [
   {
@@ -201,21 +201,21 @@ export const SALON_VIDEOS = [
   },
   {
     id: "v2",
-    src: "/videos/video2.mp4.mov",
+    src: "/videos/video21.mp4.mp4",
     title: "Bridal Styling process",
     category: "Makeup",
     tag: "Event",
   },
   {
     id: "v3",
-    src: "/videos/video3.mp4.mov",
+    src: "/videos/video23.mp4.mov",
     title: "Client Experience",
     category: "Interior",
     tag: "Client",
   },
   {
     id: "v5",
-    src: "/videos/video5.mp4.mov",
+    src: "/videos/video45.mp4.mov",
     title: "Beautiful Result",
     category: "Hair",
     tag: "Styling",
