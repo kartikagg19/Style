@@ -63,16 +63,16 @@ export default function Gallery() {
             >
               <div className="relative overflow-hidden">
                 {p.type === "video" ? (
-                  <video
-                    src={p.src}
-                    loop
-                    muted
-                    playsInline
-                    preload="metadata"
-                    className={`w-full object-cover transition-transform duration-700 group-hover:scale-105 ${
+                  <div
+                    className={`relative w-full bg-[var(--es-ink)] flex items-center justify-center transition-transform duration-700 group-hover:scale-105 ${
                       idx % 3 === 0 ? "aspect-[3/4]" : idx % 3 === 1 ? "aspect-[4/3]" : "aspect-square"
                     }`}
-                  />
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-tr from-[black] to-[var(--es-ink-2)] opacity-80" />
+                    <div className="relative z-10 w-16 h-16 rounded-full border-2 border-[var(--es-gold-2)] flex items-center justify-center bg-black/50 group-hover:bg-[var(--es-gold-2)] group-hover:border-transparent transition-all shadow-[0_10px_20px_-10px_rgba(238,197,143,0.5)]">
+                      <div className="w-0 h-0 border-t-[8px] border-t-transparent border-l-[14px] border-l-white border-b-[8px] border-b-transparent ml-1" />
+                    </div>
+                  </div>
                 ) : (
                   <img
                     src={p.src}
