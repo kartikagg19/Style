@@ -189,13 +189,12 @@ export const SEED_REVIEWS = [
 ];
 
 export const HERO_STOREFRONT =
-  "/images/gate-hd.png";
+  "/images/gate-new.png";
 
 export const SALON_VIDEOS = [
   {
     id: "v1",
     src: "/videos/video1.mp4",
-    thumb: "/images/chairs2.jpg",
     title: "Salon Walkthrough",
     category: "Interior",
     tag: "Tour",
@@ -203,7 +202,6 @@ export const SALON_VIDEOS = [
   {
     id: "v2",
     src: "/videos/video21.mp4",
-    thumb: "/images/gallery2.jpg",
     title: "Bridal Styling process",
     category: "Makeup",
     tag: "Event",
@@ -211,7 +209,6 @@ export const SALON_VIDEOS = [
   {
     id: "v3",
     src: "/videos/video23.mp4",
-    thumb: "/images/reception.jpg",
     title: "Client Experience",
     category: "Interior",
     tag: "Client",
@@ -219,7 +216,6 @@ export const SALON_VIDEOS = [
   {
     id: "v5",
     src: "/videos/video45.mp4",
-    thumb: "/images/gallery4.jpg",
     title: "Beautiful Result",
     category: "Hair",
     tag: "Styling",
