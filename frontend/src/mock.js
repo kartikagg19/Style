@@ -189,7 +189,7 @@ export const SEED_REVIEWS = [
 ];
 
 export const HERO_STOREFRONT =
-  "/images/gate-new.png";
+  "/images/gate-square.jpg";
 
 export const SALON_VIDEOS = [
   {
