@@ -31,7 +31,7 @@ export const SALON = {
 export const SALON_PHOTOS = [
   {
     id: "p0",
-    src: "/images/hero.jpg",
+    src: "/images/gate-square.jpg",
     title: "The Storefront",
     category: "Exterior",
     tag: "Entrance",
