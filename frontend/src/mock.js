@@ -31,7 +31,7 @@ export const SALON = {
 export const SALON_PHOTOS = [
   {
     id: "p0",
-    src: "/images/gate-square.jpg",
+    src: "/images/gate-storefront-hd.jpg",
     title: "The Storefront",
     category: "Exterior",
     tag: "Entrance",
@@ -189,7 +189,7 @@ export const SEED_REVIEWS = [
 ];
 
 export const HERO_STOREFRONT =
-  "/images/gate-square.jpg";
+  "/images/gate-storefront-hd.jpg";
 
 export const SALON_VIDEOS = [
   {
