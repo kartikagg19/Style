@@ -16,7 +16,7 @@ export default function MobileBar() {
         </a>
         <div className="w-px h-6 bg-white/15" />
         <a
-          href="https://elegantstylebyupasanarajput.com/4YaE8IZa7dNNv8xkeU8F/OfUAwzr9mme0LbQjTWx3/booking/" target="_blank" rel="noreferrer"
+          href="https://elegantstylebyupasanarajput.com/4YaE8IZa7dNNv8xkeU8F/" target="_blank" rel="noreferrer"
           className="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-full bg-[var(--es-gold)] text-[var(--es-ink)] font-medium text-xs uppercase tracking-widest hover:bg-[var(--es-gold-2)] transition-colors"
         >
           <CalendarCheck className="w-4 h-4" />

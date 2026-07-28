@@ -114,7 +114,7 @@ export default function Hero() {
               className="mt-5 md:mt-8 grid grid-cols-2 gap-3 md:flex md:flex-wrap md:items-center md:gap-3 es-reveal"
               style={{ animationDelay: "0.25s" }}
             >
-              <a href="https://elegantstylebyupasanarajput.com/4YaE8IZa7dNNv8xkeU8F/OfUAwzr9mme0LbQjTWx3/booking/" target="_blank" rel="noreferrer" className="es-btn-primary justify-center">
+              <a href="https://elegantstylebyupasanarajput.com/4YaE8IZa7dNNv8xkeU8F/" target="_blank" rel="noreferrer" className="es-btn-primary justify-center">
                 Book Online <ArrowRight className="w-4 h-4" />
               </a>
               <a href="https://wa.me/918527118833" target="_blank" rel="noreferrer" className="es-btn-ghost justify-center">
