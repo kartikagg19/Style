@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from "react";
-import { X, Camera, PlayCircle, Filter } from "lucide-react";
+import { X, Camera, PlayCircle, Play, Filter } from "lucide-react";
 import { SALON_PHOTOS, SALON_VIDEOS } from "../mock";
 
 // Gallery uses uploaded salon photos. You can push more images to your GitHub repo
@@ -63,9 +63,10 @@ export default function Gallery() {
             >
               <div className="relative overflow-hidden">
                 {p.type === "video" ? (
-                  <GridVideo
-                    src={p.src}
-                    className={`w-full object-cover transition-transform duration-700 group-hover:scale-105 ${
+                  <VideoTile
+                    poster={p.poster}
+                    title={p.title}
+                    className={`w-full transition-transform duration-700 group-hover:scale-105 ${
                       idx % 3 === 0 ? "aspect-[3/4]" : idx % 3 === 1 ? "aspect-[4/3]" : "aspect-square"
                     }`}
                   />
@@ -121,7 +122,15 @@ export default function Gallery() {
             onClick={(e) => e.stopPropagation()}
           >
             {active.type === "video" ? (
-              <video src={active.src} controls autoPlay className="w-full h-auto max-h-[85vh] object-contain rounded-xl" />
+              <video
+                src={active.src}
+                poster={active.poster}
+                controls
+                autoPlay
+                playsInline
+                preload="auto"
+                className="w-full h-auto max-h-[85vh] object-contain rounded-xl bg-black"
+              />
             ) : (
               <img src={active.src} alt={active.title} className="w-full h-auto max-h-[85vh] object-contain rounded-xl" />
             )}
@@ -136,36 +145,31 @@ export default function Gallery() {
   );
 }
 
-function GridVideo({ src, className }) {
-  const vidRef = React.useRef(null);
-
-  React.useEffect(() => {
-    if (!vidRef.current) return;
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((e) => {
-          if (e.isIntersecting) {
-            vidRef.current.play().catch(() => {});
-          } else {
-            vidRef.current.pause();
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-    observer.observe(vidRef.current);
-    return () => observer.disconnect();
-  }, []);
-
+// Grid tiles render NO <video> element — nothing is fetched or decoded while
+// scrolling. The real <video> is only mounted by the lightbox, on click.
+// If a video has a `poster` image it is used as the thumbnail; otherwise we
+// fall back to a branded card so the tile still reads as playable.
+function VideoTile({ poster, title, className }) {
   return (
-    <video
-      ref={vidRef}
-      src={src}
-      loop
-      muted
-      playsInline
-      preload="metadata"
-      className={className}
-    />
+    <div className={`relative ${className}`}>
+      {poster ? (
+        <img
+          src={poster}
+          alt={title}
+          loading="lazy"
+          decoding="async"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+      ) : (
+        <div className="absolute inset-0 bg-gradient-to-br from-[var(--es-ink)] via-[var(--es-ink-2)] to-[var(--es-ink)]" />
+      )}
+
+      {/* Play affordance */}
+      <div className="absolute inset-0 flex items-center justify-center">
+        <span className="flex items-center justify-center w-14 h-14 rounded-full bg-black/40 backdrop-blur-sm border border-white/30 text-white transition-transform duration-500 group-hover:scale-110">
+          <Play className="w-5 h-5 ml-0.5 fill-current" />
+        </span>
+      </div>
+    </div>
   );
 }
