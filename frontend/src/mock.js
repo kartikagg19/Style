@@ -195,6 +195,7 @@ export const SALON_VIDEOS = [
   {
     id: "v1",
     src: "/videos/video1.mp4",
+    thumb: "/videos/thumb1.jpg",
     title: "Salon Walkthrough",
     category: "Interior",
     tag: "Tour",
@@ -202,6 +203,7 @@ export const SALON_VIDEOS = [
   {
     id: "v2",
     src: "/videos/video21.mp4",
+    thumb: "/videos/thumb2.jpg",
     title: "Bridal Styling process",
     category: "Makeup",
     tag: "Event",
@@ -209,6 +211,7 @@ export const SALON_VIDEOS = [
   {
     id: "v3",
     src: "/videos/video23.mp4",
+    thumb: "/videos/thumb3.jpg",
     title: "Client Experience",
     category: "Interior",
     tag: "Client",
@@ -216,6 +219,7 @@ export const SALON_VIDEOS = [
   {
     id: "v5",
     src: "/videos/video45.mp4",
+    thumb: "/videos/thumb4.jpg",
     title: "Beautiful Result",
     category: "Hair",
     tag: "Styling",
@@ -223,6 +227,7 @@ export const SALON_VIDEOS = [
   {
     id: "v6",
     src: "/videos/video56.mp4",
+    thumb: "/videos/thumb5.jpg",
     title: "Studio Reveal",
     category: "Interior",
     tag: "Tour",

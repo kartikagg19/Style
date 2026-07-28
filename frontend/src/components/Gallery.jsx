@@ -64,7 +64,7 @@ export default function Gallery() {
               <div className="relative overflow-hidden">
                 {p.type === "video" ? (
                   <VideoTile
-                    poster={p.poster}
+                    poster={p.thumb}
                     title={p.title}
                     className={`w-full transition-transform duration-700 group-hover:scale-105 ${
                       idx % 3 === 0 ? "aspect-[3/4]" : idx % 3 === 1 ? "aspect-[4/3]" : "aspect-square"

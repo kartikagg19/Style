@@ -10,8 +10,18 @@ export default function Contact() {
 
   const submit = (e) => {
     e.preventDefault();
+    const lines = [
+      `*New Reservation Request*`,
+      `Name: ${form.name}`,
+      `Phone: ${form.phone}`,
+      form.service ? `Service: ${form.service}` : null,
+      form.date ? `Preferred Date: ${form.date}` : null,
+      form.notes ? `Notes: ${form.notes}` : null,
+    ].filter(Boolean).join("\n");
+    const waUrl = `https://wa.me/918527118833?text=${encodeURIComponent(lines)}`;
+    window.open(waUrl, "_blank", "noopener,noreferrer");
+    toast({ title: "Opening WhatsApp ✨", description: "Your reservation details are pre-filled — just hit send!" });
     setSent(true);
-    toast({ title: "Reservation received ✨", description: "We’ll confirm your slot on WhatsApp shortly." });
     setTimeout(() => setSent(false), 4000);
     setForm({ name: "", phone: "", service: "", date: "", notes: "" });
   };
