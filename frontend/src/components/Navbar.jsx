@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { Menu as MenuIcon, X, Phone } from "lucide-react";
 import { SALON } from "../mock";
 
@@ -64,9 +65,9 @@ export default function Navbar() {
           <a href="https://wa.me/918527118833" target="_blank" rel="noreferrer" className="es-btn-ghost !py-2 !px-4 !text-xs">
             WhatsApp
           </a>
-          <a href="https://elegantstylebyupasanarajput.com/4YaE8IZa7dNNv8xkeU8F/" target="_blank" rel="noreferrer" className="es-btn-primary !py-2 !px-5 !text-xs">
+          <Link to="/booking" className="es-btn-primary !py-2 !px-5 !text-xs">
             Book
-          </a>
+          </Link>
         </div>
 
         {/* Mobile actions — phone circle + menu */}
@@ -107,9 +108,9 @@ export default function Navbar() {
               <a href="https://wa.me/918527118833" target="_blank" rel="noreferrer" onClick={() => setOpen(false)} className="es-btn-ghost justify-center flex-1 mt-4">
                 WhatsApp
               </a>
-              <a href="https://elegantstylebyupasanarajput.com/4YaE8IZa7dNNv8xkeU8F/" target="_blank" rel="noreferrer" onClick={() => setOpen(false)} className="es-btn-primary justify-center flex-1 mt-4">
+              <Link to="/booking" onClick={() => setOpen(false)} className="es-btn-primary justify-center flex-1 mt-4">
                 Book
-              </a>
+              </Link>
             </div>
           </div>
         </div>

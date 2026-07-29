@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { Home as HomeIcon, ScissorsSquare, CalendarCheck, Images, MessageSquareHeart } from "lucide-react";
 
 const ITEMS = [
   { key: "top", label: "Home", icon: HomeIcon, href: "#top" },
-  { key: "contact", label: "Book", icon: CalendarCheck, href: "https://elegantstylebyupasanarajput.com/4YaE8IZa7dNNv8xkeU8F/", target: "_blank", rel: "noreferrer", primary: true },
+  { key: "contact", label: "Book", icon: CalendarCheck, to: "/booking", primary: true },
   { key: "gallery", label: "Gallery", icon: Images, href: "#gallery" },
   { key: "reviews", label: "Reviews", icon: MessageSquareHeart, href: "#reviews" },
 ];
@@ -38,9 +39,9 @@ export default function BottomNav() {
           const isActive = active === it.key;
           if (it.primary) {
             return (
-              <a
+              <Link
                 key={it.key}
-                href={it.href}
+                to={it.to}
                 className="relative -mt-6 mx-0.5 flex flex-col items-center"
               >
                 <span
@@ -57,7 +58,7 @@ export default function BottomNav() {
                 <span className="mt-0.5 text-[10px] font-medium tracking-widest uppercase text-[var(--es-accent)]">
                   {it.label}
                 </span>
-              </a>
+              </Link>
             );
           }
           return (

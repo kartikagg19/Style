@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Phone, CalendarCheck } from "lucide-react";
 import { SALON } from "../mock";
 
@@ -15,13 +16,13 @@ export default function MobileBar() {
           Call
         </a>
         <div className="w-px h-6 bg-white/15" />
-        <a
-          href="https://elegantstylebyupasanarajput.com/4YaE8IZa7dNNv8xkeU8F/" target="_blank" rel="noreferrer"
+        <Link
+          to="/booking"
           className="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-full bg-[var(--es-gold)] text-[var(--es-ink)] font-medium text-xs uppercase tracking-widest hover:bg-[var(--es-gold-2)] transition-colors"
         >
           <CalendarCheck className="w-4 h-4" />
           Book
-        </a>
+        </Link>
       </div>
     </div>
   );
