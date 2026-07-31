@@ -4,7 +4,7 @@ export const SALON = {
   name: "Elegant Style",
   owner: "Upasana Rajput",
   tagline: "Refined. Radiant. Yours.",
-  established: 2016,
+  established: 2024,
   rating: 5.0,
   reviewCount: 350,
   yearsOperating: 10,
