@@ -364,7 +364,7 @@ export default function Booking() {
           </a>
           <div className="flex items-center gap-3 p-4 rounded-xl border border-[var(--es-line)]">
             <Clock className="w-4 h-4 text-[var(--es-accent)]" />
-            {SALON.hours.weekdays}
+            {SALON.hours.all}
           </div>
           <a
             href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
