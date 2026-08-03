@@ -17,8 +17,8 @@ export const SALON = {
     pincode: "110059",
   },
   hours: {
-    weekdays: "10:00 AM – 9:00 PM",
-    sunday: "11:00 AM – 8:00 PM",
+    // Same hours every day of the week.
+    all: "10:30 AM – 9:30 PM",
   },
   socials: {
     instagram: "https://www.instagram.com/elegantstylebyupasanarajput?igsh=MWJsNDdhZXp2aDk1eA==",

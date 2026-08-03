@@ -51,7 +51,7 @@ export default function Contact() {
             <InfoRow
               icon={<Clock className="w-4 h-4" />}
               label="Hours"
-              value={`Mon–Sat: ${SALON.hours.weekdays} · Sun: ${SALON.hours.sunday}`}
+              value={`Mon–Sun: ${SALON.hours.all}`}
             />
             <InfoRow icon={<Instagram className="w-4 h-4" />} label="Follow" value="@elegantstyle_bystylist" href={SALON.socials.instagram} />
           </div>
