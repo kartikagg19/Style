@@ -17,7 +17,7 @@ import { useToast } from "../hooks/use-toast";
 
 const WA_NUMBER = SALON.phoneRaw.replace(/[^0-9]/g, "");
 const inr = (n) => `₹${n.toLocaleString("en-IN")}`;
-const ARTISTS = ["Sidhant", "Aamir", "Siraj", "Shami", "Abhishek", "Nasreem", "Zareem"];
+const ARTISTS = ["Sidhu", "Aamir", "Siraj", "Shami", "Abhishek", "Nasreen", "Zareen"];
 
 export default function Booking() {
   const { toast } = useToast();
