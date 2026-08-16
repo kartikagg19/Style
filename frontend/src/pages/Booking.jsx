@@ -17,6 +17,7 @@ import { useToast } from "../hooks/use-toast";
 
 const WA_NUMBER = SALON.phoneRaw.replace(/[^0-9]/g, "");
 const inr = (n) => `₹${n.toLocaleString("en-IN")}`;
+const ARTISTS = ["Sidhant", "Aamir", "Siraj", "Shami", "Abhishek", "Nasreem", "Zareem"];
 
 export default function Booking() {
   const { toast } = useToast();
@@ -25,7 +26,14 @@ export default function Booking() {
   const [picked, setPicked] = useState([]); // service ids, in the order tapped
   const [openGroup, setOpenGroup] = useState(null);
   const [cartOpen, setCartOpen] = useState(false);
-  const [form, setForm] = useState({ name: "", phone: "", date: "", time: "", notes: "" });
+  const [form, setForm] = useState({
+    name: "",
+    phone: "",
+    date: "",
+    time: "",
+    artist: "",
+    notes: "",
+  });
   const formRef = useRef(null);
 
   useEffect(() => {
@@ -87,6 +95,7 @@ export default function Booking() {
       `*Phone:* ${form.phone}`,
       form.date ? `*Date:* ${form.date}` : null,
       form.time ? `*Time:* ${form.time}` : null,
+      form.artist ? `*Preferred Artist:* ${form.artist}` : null,
       "",
       `*Services (${selected.length}):*`,
       ...selected.map((s, i) => `${i + 1}. ${s.name} — ${inr(s.price)}`),
@@ -293,6 +302,24 @@ export default function Booking() {
               value={form.time}
               onChange={(v) => setForm({ ...form, time: v })}
             />
+          </div>
+
+          <div className="mt-4">
+            <label className="text-xs uppercase tracking-widest text-[var(--es-cream)]/60">
+              Preferred Artist
+            </label>
+            <select
+              value={form.artist}
+              onChange={(e) => setForm({ ...form, artist: e.target.value })}
+              className="mt-2 w-full px-4 py-2.5 rounded-lg bg-white text-[var(--es-ink)] border border-[var(--es-line)] focus:outline-none focus:border-[var(--es-gold)]"
+            >
+              <option value="">No preference</option>
+              {ARTISTS.map((a) => (
+                <option key={a} value={a}>
+                  {a}
+                </option>
+              ))}
+            </select>
           </div>
 
           <div className="mt-4">
